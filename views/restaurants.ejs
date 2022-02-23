@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <!-- head start -->
+       <%-include('include/head')%>
+       <!-- head end -->
+    <link rel="stylesheet" href="styles/restaurants.css" />
+    <script src="scripts/responsive.js" defer></script>
+  </head>
+  <body>
+<!-- header start -->
+<%- include('include/header') %> 
+<!-- header end -->
+    <main>
+      <h1>Recommended restaurants</h1>
+      <p>Find your next favorite restaurants with help of our other users!</p>
+      <ul id="restaurants-list">
+        <% for(let restaurant of restaurants) { %>
+        <%- include('include/restaurants/restaurant-lists', {restaurant: restaurant}) %> 
+        <% } %> 
+      </ul>
+    </main>
+  </body>
+</html>

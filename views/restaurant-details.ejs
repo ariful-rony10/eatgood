@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <!-- head start -->
+       <%-include('include/head')%>
+       <!-- head end -->
+    <link rel="stylesheet" href="/styles/restaurants.css" />
+    <script src="/scripts/responsive.js" defer></script>
+  </head>
+  <body>
+<!-- header start -->
+<%- include('include/header') %> 
+<!-- header end -->
+    <main>
+      <h1><%= restaurant.name %></h1>
+      <p><%= restaurant.cuisin %> | <%= restaurant.address %></p>
+      <p><%= restaurant.description %></p>
+      <p><a href="<%= restaurant.website %>">View Website</a></p>
+      
+    </main>
+  </body>
+</html>
